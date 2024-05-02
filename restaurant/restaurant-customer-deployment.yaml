@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-customer
+  labels:
+    app: restaurant-customer
+    tier: frontend
+spec:
+  selector:
+    matchLabels:
+      app: restaurant-customer-webapp
+  template:
+    metadata:
+      labels:
+        app: restaurant-customer-webapp
+    spec:
+      containers:
+        - name: restaurant-customer-container
+          image: bishal12/restaurant-customer:staging
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "500Mi"
+    
