@@ -6,6 +6,7 @@ metadata:
     app: restaurant-customer
     tier: frontend
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: restaurant-customer-webapp
