@@ -21,10 +21,10 @@ spec:
           resources:
             requests:
               cpu: "250m"
-              memory: "100Mi"
+              memory: "2Gi"
             limits:
               cpu: "500m"
-              memory: "500Mi"
+              memory: "5Gi"
   strategy:
     rollingUpdate:
       maxSurge: 5
