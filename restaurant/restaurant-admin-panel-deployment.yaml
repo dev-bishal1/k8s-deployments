@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-admin-panel
+  labels:
+    app: restaurant-admin-panel
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: restaurant-admin-panel-webapp
+  template:
+    metadata:
+      labels:
+        app: restaurant-admin-panel-webapp
+    spec:
+      containers:
+        - name: restaurant-admin-panel-container
+          image: bishal12/restaurant-admin-panel:staging
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "500Mi"
+    
