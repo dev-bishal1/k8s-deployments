@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-template:
+metadata:
   name: restaurant-api
   labels:
     tier: backend
